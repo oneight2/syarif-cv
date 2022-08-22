@@ -1,12 +1,15 @@
-import { Hero, Navbar } from "../components";
+import { Hero, Navbar, Projects } from "../components";
 export default function Home() {
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full">
       <div className="mx-auto max-w-5xl px-2 md:px-1">
         <Navbar />
       </div>
-      <div className="layout-container my-[150px]">
+      <div className="layout-container">
         <Hero />
+      </div>
+      <div className="layout-container my-10">
+        <Projects />
       </div>
     </div>
   );
