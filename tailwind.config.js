@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      dropShadow: {
+        md: "0 1px 20px #38bdf8",
+      },
       fontFamily: {
         outfit: ["Outfit", ...fontFamily.sans],
       },

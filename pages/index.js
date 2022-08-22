@@ -1,4 +1,4 @@
-import { Hero, Navbar, Projects } from "../components";
+import { Hero, Navbar, Projects, Contact, Footer } from "../components";
 export default function Home() {
   return (
     <div className="w-full">
@@ -10,6 +10,12 @@ export default function Home() {
       </div>
       <div className="layout-container my-10">
         <Projects />
+      </div>
+      <div className="layout-container my-10">
+        <Contact />
+      </div>
+      <div className="layout-container my-10">
+        <Footer />
       </div>
     </div>
   );

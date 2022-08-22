@@ -6,11 +6,11 @@ const Hero = () => {
         <div className='flex flex-wrap'>
             <div className='w-full self-center px-4 lg:w-1/2'>
                 <h1 className="font-black text-white mb-2 font-outfit">
-                    Hello! <span className="text-gradient">I'm Syarif.</span>
+                    Hello! <span className="text-gradient">I'm Syarif</span>
                 </h1>
-                <p className="max-w-[300px] leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet error
-                    voluptatum soluta molestias.
+                <p className="max-w-[300px] leading-relaxed font-outfit">
+                    Currently work as web developer. <br />
+                    You've found my personal slice of the internet. Take a look and enjoy 👋
                 </p>
             </div>
             <div className='w-full self-end px-4 lg:w-1/2'>
