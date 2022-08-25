@@ -1,6 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
+import Image from 'next/image'
+import { GetSocialMedias } from '../../services/services'
 
 const Contact = () => {
+    const response = GetSocialMedias()
+    const ROOT_API = process.env.NEXT_PUBLIC_API;
     return (
         <div className='flex flex-wrap px-4'>
             <h1 className='text-white font-black font-outfit'>Find Me</h1>
@@ -9,17 +14,14 @@ const Contact = () => {
                     <div className="camera"></div>
                     <div className="display">
                         <div className="artboard artboard-demo phone-1 max-w-[290px] relative">
-                            <img src="./assets/wallpaper.jpg" className='bg-cover h-[100%] z-[0] absolute' alt="" />
+                            <Image src="/assets/wallpaper.jpg" className='bg-cover h-[100%] z-[0] absolute' alt="" layout='fill' />
                             <div className='flex flex-wrap gap-4'>
-                                <a href="" className='tooltip drop-shadow-sm transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110' data-tip="Follow My Instagram">
-                                    <img src="./assets/instagram.png" className='w-[64px] h-[64px] z-[10]' alt="" />
-                                </a>
-                                <a href="" className='tooltip drop-shadow-sm transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110' data-tip="Let's connect in LinkedIn">
-                                    <img src="./assets/linkedin.svg" className='w-[64px] h-[64px] z-[10]' alt="" />
-                                </a>
-                                <a href="" className='tooltip drop-shadow-sm transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110' data-tip="Follow My Github">
-                                    <img src="./assets/github.svg" className='w-[64px] h-[64px] z-[10]' alt="" />
-                                </a>
+                                {response ?
+                                    response.map((socialMedia, index) => (
+                                        <a href={socialMedia.attributes.link} key={index} className='tooltip drop-shadow-sm transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110' data-tip={`Follow My ${socialMedia.attributes.title}`}>
+                                            <img src={`${ROOT_API}${socialMedia.attributes.icon.data.attributes.url}`} className='w-[64px] h-[64px] z-[10]' alt="" layout="fill" />
+                                        </a>
+                                    )) : 'Loading...'}
                             </div>
                         </div>
                     </div>
