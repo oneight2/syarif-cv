@@ -4,9 +4,8 @@ import { GetNavbar } from '../../services/services'
 
 const Navbar = () => {
     const response = GetNavbar();
-    console.log("swr", response)
     return (
-        <div className="navbar bg-base-100 font-outfit backdrop-blur-md ">
+        <div className="navbar sticky top-0 font-outfit backdrop-filter backdrop-blur-lg bg-opacity-30">
             <div className="flex-1">
                 <a className="btn btn-ghost normal-case text-xl">oneight2</a>
             </div>

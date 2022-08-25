@@ -10,7 +10,7 @@ const Contact = () => {
         <div className='flex flex-wrap px-4'>
             <h1 className='text-white font-black font-outfit'>Find Me</h1>
             <div className='flex w-full self-center mt-10 mx-auto'>
-                <div className="mockup-phone w-[320px] hover:drop-shadow-md transition ease-in-out delay-150 ">
+                <div className="mockup-phone w-[320px] hover:drop-shadow-md transition ease-in-out ">
                     <div className="camera"></div>
                     <div className="display">
                         <div className="artboard artboard-demo phone-1 max-w-[290px] relative">
@@ -18,7 +18,7 @@ const Contact = () => {
                             <div className='flex flex-wrap gap-4'>
                                 {response ?
                                     response.map((socialMedia, index) => (
-                                        <a href={socialMedia.attributes.link} key={index} className='tooltip drop-shadow-sm transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110' data-tip={`Follow My ${socialMedia.attributes.title}`}>
+                                        <a href={socialMedia.attributes.link} key={index} className='tooltip drop-shadow-sm transition ease-in-out  hover:-translate-y-1 hover:scale-110' data-tip={`Follow My ${socialMedia.attributes.title}`}>
                                             <img src={`${ROOT_API}${socialMedia.attributes.icon.data.attributes.url}`} className='w-[64px] h-[64px] z-[10]' alt="" layout="fill" />
                                         </a>
                                     )) : 'Loading...'}

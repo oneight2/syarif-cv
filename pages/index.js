@@ -8,8 +8,8 @@ import {
 } from "../components";
 export default function Home() {
   return (
-    <div className="w-full">
-      <div className="mx-auto max-w-5xl px-2 md:px-1 md:block lg:block hidden">
+    <div className="w-full scroll-smooth">
+      <div className="mx-auto max-w-5xl px-2 md:px-1 md:block lg:block hidden sticky top-0 z-[99]">
         <Navbar />
       </div>
       <div className="mx-auto max-w-5xl px-2 md:px-1 md:hidden lg:hidden">

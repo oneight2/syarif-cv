@@ -6,7 +6,10 @@ const ROOT_API = process.env.NEXT_PUBLIC_API;
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export function GetHome() {
-  const { data, error } = useSWR(`${ROOT_API}/api/home`, fetcher);
+  const { data, error } = useSWR(
+    `${ROOT_API}/api/home?populate=heroPicture`,
+    fetcher
+  );
   if (error) return error;
   if (!data) return null;
   return data.data;
