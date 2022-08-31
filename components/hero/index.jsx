@@ -13,14 +13,17 @@ const Hero = () => {
                     Hello! <span className="text-gradient">I'm Syarif</span>
                 </h1>
                 <p className="max-w-[300px] leading-relaxed font-outfit" >
-                    {parse(response ? response.attributes.heroText : 'Loading...')}
+                    {response && (
+                        parse(response.attributes.heroText)
+                    )}
+                    {/* {parse(response ? response.attributes.heroText : 'Loading...')} */}
                 </p>
             </div>
             <div className='w-full self-end px-4 lg:w-1/2'>
                 <div className='relative mt-10'>
                     {
                         response && (
-                            <img src={ROOT_API + response.attributes.heroPicture.data.attributes.url} alt="robot" className='max-w-full mx-auto z-[5]' />
+                            <img src={ROOT_API + response.attributes.heroPicture.data.attributes.url} alt="robot" className='max-w-full mx-auto z-[5] relative' />
                         )
                     }
                     <div className='z-[0] absolute w-[50%] h-[50%] top-0 pink__gradient' />

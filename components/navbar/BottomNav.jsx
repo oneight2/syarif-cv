@@ -9,7 +9,7 @@ const BottomNav = () => {
                 <button key={index} className="text-[24px]">
                     {data.attributes.icon}
                 </button>
-            )) : 'Loading..'}
+            )) : <p>Loading...</p>}
         </div>
     )
 }

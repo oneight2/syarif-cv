@@ -13,7 +13,7 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal p-0">
                     {response !== null ? response.map((data, index) => (
                         <li key={index} className="tooltip tooltip-bottom" data-tip={data.attributes.tooltip}><Link href={data.attributes.url} ><p className="text-[24px]">{data.attributes.icon}</p></Link></li>
-                    )) : 'Loading...'}
+                    )) : <p>Loading...</p>}
                 </ul>
             </div>
         </div>
