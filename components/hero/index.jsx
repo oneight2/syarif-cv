@@ -12,7 +12,7 @@ const Hero = () => {
                 <h1 className="font-black text-white mb-2 font-outfit">
                     Hello! <span className="text-gradient">I'm Syarif</span>
                 </h1>
-                <p className="max-w-[300px] leading-relaxed font-outfit" >
+                <p className="max-w-[300px] leading-relaxed font-outfit z-[5]" >
                     {response && (
                         parse(response.attributes.heroText)
                     )}
