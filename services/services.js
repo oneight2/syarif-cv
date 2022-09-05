@@ -29,3 +29,11 @@ export function GetSocialMedias() {
   if (!data) return null;
   return data.data;
 }
+
+export function GetProjects(pageSize, sort) {
+  const url = `${ROOT_API}/api/projects?sort=year_project%3A${sort}&pagination%5BpageSize%5D=${pageSize}&populate=picture`;
+  const { data, error } = useSWR(url, fetcher);
+  if (error) return error;
+  if (!data) return null;
+  return data.data;
+}
