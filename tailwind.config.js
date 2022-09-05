@@ -1,4 +1,3 @@
-const { fontFamily } = require("tailwindcss/defaultTheme");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -11,7 +10,7 @@ module.exports = {
         md: "0 1px 20px #38bdf8",
       },
       fontFamily: {
-        outfit: ["Outfit", ...fontFamily.sans],
+        outfit: ["Outfit"],
       },
     },
   },
