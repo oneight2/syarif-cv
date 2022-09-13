@@ -23,8 +23,12 @@ const Card = ({ index, title, description, yearProject, privateProject, link, ty
                 <div className="modal-box relative font-outfit">
                     <figure><img src={ROOT_API + picture} alt="Shoes" layout='fill' className='rounded-2xl' /></figure>
                     <label htmlFor={`modalProject-${index}`} className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                    <h3 className="text-lg font-bold">Congratulations random Internet user!</h3>
-                    <p className="py-4"> been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                    <h3 className="mt-5 font-black text-gradient">{title}</h3>
+                    <p className="mt-4">{parse(description)}</p>
+                    <div className='flex gap-3 mt-3'>
+                        <span className="badge badge-accent text-[7pt]">{yearProject.slice(-10, -6)}</span>
+                        <span className={`badge ${typeProject === 'self project' ? 'badge-secondary' : 'badge-primary'} text-[7pt]`}>{typeProject}</span>
+                    </div>
                 </div>
             </div>
         </>
