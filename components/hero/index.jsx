@@ -1,8 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react'
 import { GetHome } from '../../services/services'
 import parse from 'html-react-parser'
+import Image from 'next/image'
 const Hero = () => {
     const response = GetHome()
     const ROOT_API = process.env.NEXT_PUBLIC_API
@@ -23,11 +23,11 @@ const Hero = () => {
                 <div className='relative mt-10'>
                     {
                         response && (
-                            <img src={ROOT_API + response.attributes.heroPicture.data.attributes.url} alt="robot" className='max-w-full mx-auto z-[5] relative' />
+                            <Image src={ROOT_API + response.attributes.heroPicture.data.attributes.url} alt="robot" className='max-w-full mx-auto z-[5] relative' width='500px' height='400px' />
                         )
                     }
-                    <div className='z-[0] absolute w-[50%] h-[50%] top-0 pink__gradient' />
-                    <div className='z-[0] absolute w-[50%] h-[50%] right-0 bottom-0 rounded-full blue__gradient' />
+                    <div className='z-[0] absolute w-[50%] h-[50%] top-0 pink__gradient motion-safe:animate-spin' />
+                    <div className='z-[0] absolute w-[50%] h-[50%] right-0 bottom-0 rounded-full blue__gradient scale-150' />
                 </div>
             </div>
         </div >

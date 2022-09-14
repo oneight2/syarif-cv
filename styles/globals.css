@@ -80,3 +80,17 @@ body::-webkit-scrollbar-thumb
 	-webkit-box-shadow: inset 0 0 6px #0f1729;
 	background-color: #455d9187;
 }
+
+/* HANDLE IMAGE NEXTJS */
+.image-container{
+  height: 100%;
+}
+.image-container span, .image-container div {
+  position: unset !important;
+}
+.image{
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
