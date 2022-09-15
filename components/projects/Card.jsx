@@ -20,7 +20,7 @@ const Card = ({ index, title, description, yearProject, privateProject, link, ty
             <input type="checkbox" id={`modalProject-${index}`} className="modal-toggle" />
             <div className="modal backdrop-filter backdrop-blur-sm bg-opacity-30">
                 <div className="modal-box relative font-outfit">
-                    <OwnImage src={ROOT_API + picture} alt="Shoes" className='rounded-2xl image' />
+                    <OwnImage src={ROOT_API + picture} alt="Shoes" className='rounded-2xl image' layout="fill" />
                     <label htmlFor={`modalProject-${index}`} className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <h3 className="mt-5 font-black text-gradient">{title}</h3>
                     <p className="mt-4">{parse(description)}</p>

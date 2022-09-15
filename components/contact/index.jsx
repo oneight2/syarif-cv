@@ -1,8 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import Image from 'next/image'
 import { GetSocialMedias } from '../../services/services'
-
 const Contact = () => {
     const response = GetSocialMedias()
     const ROOT_API = process.env.NEXT_PUBLIC_API;
@@ -19,7 +17,7 @@ const Contact = () => {
                                 {response ?
                                     response.map((socialMedia, index) => (
                                         <a href={socialMedia.attributes.link} key={index} className='tooltip drop-shadow-sm transition ease-in-out  hover:-translate-y-1 hover:scale-110' data-tip={`Follow My ${socialMedia.attributes.title}`} target="_blank" rel='noreferrer'>
-                                            <img src={`${ROOT_API}${socialMedia.attributes.icon.data.attributes.url}`} className='w-[64px] h-[64px] z-[10]' alt="" layout="fill" />
+                                            <Image src={`${ROOT_API}${socialMedia.attributes.icon.data.attributes.url}`} className='w-[64px] h-[64px] z-[10]' alt="" width={'64px'} height={'64px'} />
                                         </a>
                                     )) : <p>Loading...</p>}
                             </div>

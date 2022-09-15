@@ -3,6 +3,7 @@ import React from 'react'
 import { GetHome } from '../../services/services'
 import parse from 'html-react-parser'
 import Image from 'next/image'
+import OwnImage from '../../helper/Image'
 const Hero = () => {
     const response = GetHome()
     const ROOT_API = process.env.NEXT_PUBLIC_API
